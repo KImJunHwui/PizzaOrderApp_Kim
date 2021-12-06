@@ -41,6 +41,8 @@ class PIzzaStoreListFragment : Fragment() {
 mPizzaStoreAdapter = com.kim.pizzaorderapp_kim.adapters.PizzaStoreAdapter(requireContext(), R.layout.pizza_store_list_item, mPizzaStoreDataList)
         pizzaStoreListView.adapter = mPizzaStoreAdapter
 
+
+
     }
 
 
