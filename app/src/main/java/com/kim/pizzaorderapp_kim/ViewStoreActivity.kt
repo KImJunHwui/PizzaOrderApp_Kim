@@ -1,11 +1,13 @@
 package com.kim.pizzaorderapp_kim
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.kim.pizzaorderapp_kim.Datas.Store
 import kotlinx.android.synthetic.main.activity_view_store.*
+import java.net.URL
 
 class ViewStoreActivity : BaseActivity() {
 
@@ -20,6 +22,14 @@ class ViewStoreActivity : BaseActivity() {
 
 
     override fun setupEvents() {
+
+        callPhoneBtn.setOnClickListener {
+
+            val myUri = Uri.parse("tel : ${mStoreData.phoneNum}")
+
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
+        }
     }
 
     override fun setValues() {
